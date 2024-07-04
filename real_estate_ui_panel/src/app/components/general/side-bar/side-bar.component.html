@@ -1,0 +1,89 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item nav-profile">
+        <div class="nav-link">
+          <div class="profile-image">
+            <img src="../../../../assets/images/faces/face5.jpg" alt="image"/>
+          </div>
+          <div class="profile-name">
+            <p class="name">
+              Welcome {{username}}
+            </p>
+            <p class="designation">
+              {{user_role}}
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="cursor: pointer;">
+          <i class="fa fa-home menu-icon"></i>
+          <span class="menu-title">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="false" aria-controls="page-layouts">
+          <i class="fab fa-trello menu-icon"></i>
+          <span class="menu-title">Categories</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="page-layouts">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item d-none d-lg-block"> <a class="nav-link" style="cursor: pointer;" (click)="addCategory()">Add Category</a></li>
+            <li class="nav-item d-none d-lg-block"> <a class="nav-link" style="cursor: pointer;" (click)="categoryList()">Category List</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item d-none d-lg-block">
+        <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
+          <i class="fas fa-columns menu-icon"></i>
+          <span class="menu-title">Roles</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="sidebar-layouts">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" (click)="addRole()">Add Role</a></li>
+            <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" (click)="roleList()">Role Management</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+          <i class="far fa-compass menu-icon"></i>
+          <span class="menu-title">House Agent</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-basic">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" (click)="addAgent()">Add Agent</a></li>
+            <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" (click)="agentList()">Agents List</a></li>
+          </ul>
+          </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="cursor: pointer;">
+          <i class="fas fa-pen-square menu-icon"></i>
+          <span class="menu-title">Customers</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false" aria-controls="ui-advanced">
+          <i class="fas fa-clipboard-list menu-icon"></i>
+          <span class="menu-title">Payment && Others</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-advanced">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" (click)="paymentData()">Payments</a></li>
+            <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" (click)="feedBackArea()">Feedbacks</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="cursor: pointer;" (click)="userManagement()">
+          <i class="fas fa-minus-square menu-icon"></i>
+          <span class="menu-title">User Management</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
